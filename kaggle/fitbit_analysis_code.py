@@ -24,9 +24,9 @@ daily_activity = pd.read_csv(CSV_DAILY_ACTIVITY_MERGED)
 daily_sleep = pd.read_csv(CSV_DAILY_SLEEP)
 hourly_steps = pd.read_csv(CSV_HOURLY_STEPS)
 
-print(daily_activity)
-print(daily_sleep)
-print(hourly_steps)
+#print(daily_activity)
+#print(daily_sleep)
+#print(hourly_steps)
 
 print(daily_activity.describe())
 print(daily_sleep.describe())
