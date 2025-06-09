@@ -1,1 +1,3 @@
-CSV_DAILY_ACTIVITY_MERGED = "/Users/aishwaryarkoujalgi/Desktop/code/healthcareanalytics101/kaggle/datasets/Fitabase Data 3.12.16-4.11.16/dailyActivity_merged.csv"
+CSV_DAILY_ACTIVITY_MERGED = "/Users/aishwaryarkoujalgi/Desktop/code/healthcareanalytics101/kaggle/datasets/Fitabase Data 4.12.16-5.12.16/dailyActivity_merged.csv"
+CSV_DAILY_SLEEP = "/Users/aishwaryarkoujalgi/Desktop/code/healthcareanalytics101/kaggle/datasets/Fitabase Data 4.12.16-5.12.16/sleepDay_merged.csv"
+CSV_HOURLY_STEPS = "/Users/aishwaryarkoujalgi/Desktop/code/healthcareanalytics101/kaggle/datasets/Fitabase Data 4.12.16-5.12.16/hourlySteps_merged.csv"

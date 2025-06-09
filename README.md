@@ -10,5 +10,8 @@ python3 -m venv venv --prompt="kaggle"
 source venv/bin/activate
 ```
 
-## References -
+# References
 1. [FitBit Data](https://www.kaggle.com/datasets/arashnic/fitbit/data)
+
+# Aim
+To analyze fitness data and determine how it could help unlock new business growth opportunities. 
