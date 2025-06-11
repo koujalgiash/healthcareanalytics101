@@ -53,6 +53,7 @@ daily_activity.drop_duplicates(inplace=True)
 daily_sleep.drop_duplicates(inplace=True)
 hourly_steps.drop_duplicates(inplace=True)
 
-print("Number of duplicates in daily activity is:", daily_activity.duplicated().sum())
-print("Number of duplicates in daily sleep is:", daily_sleep.duplicated().sum())
-print("Number of duplicates in hourly steps is:", hourly_steps.duplicated().sum())
+# To verify if the duplicates have been removed. 
+#print("Number of duplicates in daily activity is:", daily_activity.duplicated().sum())
+#print("Number of duplicates in daily sleep is:", daily_sleep.duplicated().sum())
+#print("Number of duplicates in hourly steps is:", hourly_steps.duplicated().sum())
