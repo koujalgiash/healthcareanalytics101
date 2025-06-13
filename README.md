@@ -28,4 +28,9 @@ Kaggle data set [FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/ar
 - 30 eligible Fitbit users consented to the submission of personal tracker data for 31 days, including minute-level output for physical activity, heart rate, and sleep monitoring.
 
 ## References
-[Bellabeat Website](https://bellabeat.com/)
+1. [Bellabeat Website](https://bellabeat.com/)
+2. [How Many Steps a Day Is Considered Active?](https://www.medicinenet.com/how_many_steps_a_day_is_considered_active/article.htm)
+3. [Number of steps per day more important than step intensity](https://www.nih.gov/news-events/nih-research-matters/number-steps-day-more-important-step-intensity)
+4. [Daily steps and all-cause mortality](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(21)00302-9/fulltext#seccestitle140)
+5. [Adult Activity: An Overview](https://www.cdc.gov/physical-activity-basics/guidelines/adults.html)
+
