@@ -28,11 +28,11 @@ Kaggle data set [FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/ar
 - Approximately **80%** of the recorded time is sedentary, suggesting that the device is not being used to its full potential for promoting physical activity. 
 - In contrast, only around **3%** of the time reflects moderate to vigorous activity, indicating limited engagement in more active behaviors.
 
-![Stacked bar graph of average time spent in each activity zone per user](kaggle/figures/figure_1.png)
+![Stacked bar graph of average time spent in each activity zone per user](figures/figure_1.png)
 
 **Figure 1:** This bar graph shows the activity patterns of users. The X-axis contains user id, and the Y-axis represents average time (minutes) during the 31 days of device usage.
 
-![Pie Chart](kaggle/figures/figure_2.png)
+![Pie Chart](figures/figure_2.png)
 
 **Figure 2:** Pie chart illustrating the average time spent during 31 days of the smart device usage.
 
@@ -40,7 +40,7 @@ Kaggle data set [FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/ar
 
 - **Figure 3** illustrates the trends in average daily step count per user in 31 days. Additionally, a list of users categorized by activity zone can be generated (see the **"Step Goal"** section in the code).
 
-![Bar Graph](kaggle/figures/figure_3.png)
+![Bar Graph](figures/figure_3.png)
 
 **Figure 3:** Bar Graph of average daily steps in 31 days of each user, categorised into intensities. 
 
@@ -50,15 +50,15 @@ Kaggle data set [FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/ar
 - The correlation matrix in **Figure 4** shows that the least calories are expended during sedentary activity, and calorie expenditure increases with higher activity levels. 
 - **Figure 5**  presents a scatter plot illustrating the distribution of user trends. Sedentary activity (red dots) consistently shows the longest duration combined with the lowest calorie expenditure.
 
-![Correlation Matrix](kaggle/figures/figure_4.png)
+![Correlation Matrix](figures/figure_4.png)
 
 **Figure 4:** Correlation matrix of average time spent in each activity zone and the average calorie expenditure.
 
-![Multiple Linear Regression](kaggle/figures/figure_5.png)
+![Multiple Linear Regression](figures/figure_5.png)
 
 **Figure 5:** Scatter plot of Multiple Linear Regression model of the average time spent in each activity zone and the average calorie expenditure.
 
-![Subplots](kaggle/figures/figure_6.png)
+![Subplots](figures/figure_6.png)
 
 **Figure 6:** Subplots of Scatter plot of Multiple Linear Regression models with regression line.
 
