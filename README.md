@@ -1,14 +1,8 @@
 # healthcareanalytics101
 
-1. To create a virtual environment
-```
-python3 -m venv venv --prompt="kaggle"
-```
-
-2. To activate a virtual environment
-```
-source venv/bin/activate
-```
+1. This Repository contains all code and reports for all my projects related to healthcare data analytics
+2. The projects in this repository are -
+    1. Bellabeat Case Study 
 
 # Bellabeat Case Study
 
