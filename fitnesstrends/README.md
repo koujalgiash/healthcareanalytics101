@@ -1,12 +1,12 @@
 # Bellabeat Case Study
 
-This is a case study aimed to identify trends in usage of smart devices for recording physical activity. Potential opportunities for growth and recommendations are provided to Bellabeat, a fitness company.
+This case study aims to identify trends in smart device usage for tracking physical activity and provides Bellabeat, a wellness company, with growth opportunities and data-driven marketing recommendations.
 
 - Kaggle data set [FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/arashnic/fitbit) has been used for this case study.
 
 - Data analysis and visualizations were performed in Python using Jupyter Notebooks within Visual Studio Code.
 
-- Based on the data analysis, I have also provided evidence-based recommendations to support and enhance user engagement, to ultimately improvre Bellabeat's marketing strategy.
+- Based on the data analysis, I have also provided evidence-based recommendations to support and enhance user engagement, ultimately improving Bellabeat's marketing strategy.
 
 - A detailed report of this case study can be found in the 'fitnesstrends_report.pdf'.
 
