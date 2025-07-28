@@ -8,7 +8,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.model_selection import GridSearchCV
 
 # Load and prepare dataset
-df = pd.read_csv('/Users/aishwaryarkoujalgi/Docs/Coding Exercises/healthcareanalytics101/ML_algorithms/Fitabase Data 4.12.16-5.12.16/dailyActivity_merged.csv')
+df = pd.read_csv('/Users/aishwaryarkoujalgi/Docs/Coding Exercises/healthcareanalytics101/ML_algorithms/Random_Forest/Fitabase Data 4.12.16-5.12.16/dailyActivity_merged.csv')
 
 # Drop missing values
 df = df.dropna(subset=['TotalSteps', 'Calories'])

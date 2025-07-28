@@ -65,7 +65,7 @@ B. Model Performance
 | **Simple Linear Regression**  | 348,941.22 | 590.71 | 471.19 | 0.305    |
 | **Random Forest Regressor**   | 380,591.78 | 616.92 | 500.68 | 0.240    |
 
-- Refer to bar graph comparison figures [MSE Comparison](ML_algorithms/mse_comaparison.png), [RMSE Comparison](ML_algorithms/rmse_comparison.png) and [MAE Comparison](ML_algorithms/mae_comparison.png).
+- Refer to bar graph comparison figures [MSE Comparison](ML_algorithms/Random_Forest/figures/mse_comparison.png), [RMSE Comparison](ML_algorithms/Random_Forest/figures/rmse_comparison.png) and [MAE Comparison](ML_algorithms/Random_Forest/figures/mae_comparison.png).
 
 **1. Baseline Performance** (Mean Predictor)
 - A naive model that predicts the mean calorie value for all samples.
@@ -81,9 +81,11 @@ B. Model Performance
 - Surprisingly, Random Forest performs *worse* than Linear Regression here: Higher MSE, RMSE, and MAE and lower R² score (24%) than Linear Regression.
 - This suggests that the relationship between *total steps* and *calories* might not benefit from complexity, or the Random Forest may be **overfitting**, or not yet optimally tuned.
 
-- [Scatter Plot of Actual and predicted values](ML_algorithms/rf_lr.png) displays the patterns in spread of data points. Clustering around the *prediction line* (Points close to the identity line (y = x)) indicates good predictions. Spread around the line indicated prediction error. 
+[Scatter Plot of Actual and Predicted](ML_algorithms/Random_Forest/figures/rf_lr.png)
+displays the patterns in spread of data points. Clustering around the *prediction line* (Points close to the identity line (y = x)) indicates good predictions. Spread around the line indicated prediction error. 
 
-- [Residual Plot (Errors)](ML_algorithms/residual.png) displays a wider spread that indicates higher variance (potential overfitting or underfitting).
+[Residual Plot (Errors)](ML_algorithms/Random_Forest/figures/residual.png) 
+displays a wider spread that indicates higher variance (potential overfitting or underfitting).
 
 ## Conclusion
 - The complex models were much better at prediction than a simple baseline containing mean perdioctors.
@@ -94,3 +96,8 @@ B. Model Performance
     - Try other models: Gradient Boosting, XGBoost
     - Add predictors like: activity duration, TotalDistance.
     - Cross-validation for robust performance estimates.
+
+
+[def]: ML_algorithms/Random_Forest/figures/rf_lr.png
+[def2]: ML_algorithms/Random_Forest/figures/rf_lr.png
+[def3]: ML_algorithms/Random_Forest/figures/rf_lr.png
