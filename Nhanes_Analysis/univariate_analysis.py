@@ -9,10 +9,16 @@ nhanes_data = "nhanes_2015_2016.csv"
 df = pd.read_csv(nhanes_data)
 print(df.head())
 
+# The aim of this investigation is to identify trends across the NHANES dataset
+# I perform an analysis across one variable in this sub-section
+
+# 1. The first analysis is done for education levels for all 5600 participants
 # CATEGORICAL SUMMARIES
 # Frequency Distribution of variable DMDEDUC2 [Education level]
 mode = df.DMDEDUC2.value_counts()
 print("Frequency distribution of Education levels:", mode)
+
+import pdb; pdb.set_trace()
 
 # Locate the null (missing) values
 null = pd.isnull(df.DMDEDUC2).sum()
