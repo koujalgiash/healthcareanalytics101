@@ -4,7 +4,7 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 
-nhanes_data = "/Users/aishwaryarkoujalgi/Docs/Coding Exercises/coursera/nhanes_2015_2016.csv"
+nhanes_data = "nhanes_2015_2016.csv"
 
 df = pd.read_csv(nhanes_data)
 print(df.head())
