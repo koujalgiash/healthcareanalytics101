@@ -4,21 +4,16 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 
-nhanes_data = "nhanes_2015_2016.csv"
-
+nhanes_data = "/Users/aishwaryarkoujalgi/Docs/Coding Exercises/healthcareanalytics101/NHANES_Trends/nhanes_2015_2016.csv"
 df = pd.read_csv(nhanes_data)
 print(df.head())
 
-# The aim of this investigation is to identify trends across the NHANES dataset
-# I perform an analysis across one variable in this sub-section
+############ PART 1: Understanding and Visualizing Data ############
 
-# 1. The first analysis is done for education levels for all 5600 participants
-# CATEGORICAL SUMMARIES
+# 1. CATEGORICAL SUMMARIES
 # Frequency Distribution of variable DMDEDUC2 [Education level]
 mode = df.DMDEDUC2.value_counts()
 print("Frequency distribution of Education levels:", mode)
-
-import pdb; pdb.set_trace()
 
 # Locate the null (missing) values
 null = pd.isnull(df.DMDEDUC2).sum()
@@ -38,12 +33,11 @@ print("Frequency Distribution of Gender:", genx)
 propx = modex / modex.sum()
 print("Proportions of Education levels are:", propx)
 
-# NUMERICAL SUMMARIES
+# 2. NUMERICAL SUMMARIES
 # Descriptive statistics
 bw = df["BMXWT"].dropna().describe()
 print("Discriptive Statistics of Body Weight:", bw)
 
-#Individual statistics 
 # Measures of Central Tendency
 bwx = df["BMXWT"].dropna()  # Extract all non-missing values of BMXWT into a variable called 'x'
 print("Mean Body Weight:", bwx.mean()) # Pandas method
@@ -62,18 +56,43 @@ print("Variance of BW:", bwx.var())
 dbp = np.mean((df.BPXDI1 >= 80) & (df.BPXDI2 <= 89))
 print("Proportion of people with pre-hypertensive DBP:", dbp)
 
-# GRAPHICAL SUMMARIES
+# 3. GRAPHICAL SUMMARIES
 # Distribution of Body Weight in Histogram
-sns.displot(df.BMXWT.dropna())
+ax = sns.histplot(df.BMXWT.dropna())
+ax.set(title="Distribution of Body Weight", xlabel="Body Weight (kg)", ylabel="Count")
 plt.show()
 
+# Side-by-side Boxplot 
 # Comparing Systolic and Diastolic blood pressures in first and second measurements. 
-bp = sns.boxplot(data=df.loc[:, ["BPXSY1", "BPXSY2", "BPXDI1", "BPXDI2"]])
-_ = bp.set_ylabel("Blood pressure in mm/Hg")
+bp_cols = {
+    "BPXSY1": "Systolic BP 1",
+    "BPXSY2": "Systolic BP 2",
+    "BPXDI1": "Diastolic BP 1",
+    "BPXDI2": "Diastolic BP 2"
+}
+bp = sns.boxplot(data=df.loc[:, bp_cols.keys()].rename(columns=bp_cols))
+bp.set(title= "Comparing SBP and DBP in two measurements", xlabel= "Measurements", ylabel= "Blood pressure in mm/Hg")
 plt.show()
 
-# Observing if blood pressure tends to increase with age.
-df["agegrp"] = pd.cut(df.RIDAGEYR, [18, 30, 40, 50, 60, 70, 80]) # Create age strata based on these cut points
-plt.figure(figsize=(12, 5))  # Make the figure wider than default (12cm wide by 5cm tall)
-sns.boxplot(x="agegrp", y="BPXSY1", data=df)  # Make boxplot of BPXSY1 stratified by age group
+# Side-by-side Boxplot with stratification
+# Observing blood pressure trends with age. 
+df["agegrp"] = pd.cut(df.RIDAGEYR, [18, 30, 40, 50, 60, 70, 80]) # Create age groups
+bp_first = {
+    "BPXSY1": "Systolic BP 1",
+    "BPXDI1": "Diastolic BP 1"
+}
+plt.figure(figsize=(12, 5))
+bp_1= sns.boxplot(
+    x="agegrp",
+    y="BP_Value",
+    hue="BP_Type",
+    data=df.melt(id_vars="agegrp", value_vars=bp_first.keys(),
+                 var_name="BP_Type", value_name="BP_Value").replace({"BP_Type": bp_first})
+)
+bp_1.set(title= "Trends in Systolic Blood Pressure with Age", xlabel= "Age Group", ylabel= "Blood pressure in mm/Hg")
 plt.show() 
+
+
+############ PART 2: Inferential Statistical Analysis ############
+
+
